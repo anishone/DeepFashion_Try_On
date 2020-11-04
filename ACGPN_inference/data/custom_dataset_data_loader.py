@@ -1,6 +1,6 @@
 import torch.utils.data
 from data.base_data_loader import BaseDataLoader
-
+import pdb
 
 def CreateDataset(opt):
     dataset = None
@@ -16,6 +16,7 @@ class CustomDatasetDataLoader(BaseDataLoader):
         return 'CustomDatasetDataLoader'
 
     def initialize(self, opt):
+        # pdb.set_trace()
         BaseDataLoader.initialize(self, opt)
         self.dataset = CreateDataset(opt)
         self.dataloader = torch.utils.data.DataLoader(
