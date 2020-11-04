@@ -10,6 +10,8 @@ import torch
 from torch.autograd import Variable
 from tensorboardX import SummaryWriter
 import cv2
+import pdb
+
 writer = SummaryWriter('runs/G1G2')
 SIZE=320
 NC=14
@@ -96,6 +98,7 @@ print_delta = total_steps % opt.print_freq
 save_delta = total_steps % opt.save_latest_freq
 
 step = 0
+# pdb.set_trace()
 
 for epoch in range(start_epoch, opt.niter + opt.niter_decay + 1):
     epoch_start_time = time.time()
